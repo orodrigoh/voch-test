@@ -73,4 +73,13 @@ class UnidadeController extends Controller
         return redirect()->back()->with('success', 'Funcionário criado com sucesso.');
 
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        $unidades = Unidade::where('razao_social', 'LIKE', '%' . $query . '%')->get();
+
+        return view('list-units', ['unidades' => $unidades]);
+    }
 }

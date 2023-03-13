@@ -39,6 +39,7 @@ Route::post('/unidades', [UnidadeController::class, 'store']);
 Route::get('/unidades/{id}/edit', [UnidadeController::class, 'edit'])->name('unidades.edit');
 Route::put('/unidades/{id}', [UnidadeController::class, 'update']);
 Route::delete('/unidades/{id}/delete', [UnidadeController::class, 'delete'])->name('unidades.delete');
+Route::get('/unidades/search', [UnidadeController::class, 'search']);
 
 
 Route::get('/validar-email/{email}', [FuncionarioController::class, 'validarEmail']);

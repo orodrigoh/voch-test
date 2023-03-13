@@ -14,8 +14,8 @@
             </div>
         @endif
         <div class="search-container">
-            <form action="">
-                <input type="text" id="search" name="search" class="form-control" placeholder="Procurar unidade">
+            <form form action="/unidades/search" method="GET">
+                <input type="text" id="search" name="query" class="form-control" placeholder="Procurar unidade">
             </form>
         </div>
 
