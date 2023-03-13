@@ -1,0 +1,38 @@
+.list-employees {
+    margin-top: 160px;
+
+    .search-container {
+        width: 400px;
+        // margin-right: auto;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        button {
+            background: none;
+            border: none;
+        }
+      }
+
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 16px;
+        vertical-align: middle;
+        height: 32px;
+        font-size: 12px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+
+      thead {
+        tr{
+            background-color: #fff;
+            padding: 18px 0;
+            height: 50px;
+          }
+      }
+
+}

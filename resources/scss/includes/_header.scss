@@ -1,0 +1,26 @@
+header {
+    padding: 32px 0;
+    position: fixed;
+    width: 100%;
+    &.transparent {
+        background: transparent;
+    }
+    &.white {
+        background: #fff;
+    }
+    .wrap-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .logo {
+       width: 250px;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+    }
+}
