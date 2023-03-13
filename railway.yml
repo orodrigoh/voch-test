@@ -1,0 +1,25 @@
+name: minha-aplicacao
+services:
+  app:
+
+    build:
+      dockerfile: Dockerfile
+    # comando para instalar o Composer e as dependências PHP
+    run:
+      name: Install PHP dependencies
+      command: |
+        curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+        composer install --no-dev --prefer-dist --optimize-autoloader
+    # comando para instalar o NPM e as dependências JavaScript
+    run:
+      name: Install JavaScript dependencies
+      command: |
+        curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+        apt-get install -y nodejs
+        npm install --production
+    # comando para rodar as migrações e seeders
+    run:
+      name: Run migrations and seeders
+      command: |
+        php artisan migrate --force
+        php artisan db:seed --force
